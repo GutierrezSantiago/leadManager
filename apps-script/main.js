@@ -12,6 +12,7 @@ const doGet = (e) => {
 }
 
 const handleLeads = (e) => {
+
   if (e.parameter.email) {
     email = e.parameter.email
     leads = getLeadsByEmail(email)
@@ -27,8 +28,9 @@ const handleLeads = (e) => {
 }
 
 const handleHistorialesEstado = (e) => {
+  
   email = e.parameter.email
-  const historiales = getStateHistoryByEmail(email)
+  historiales = getStateHistoryByEmail(email)
 
   const response = {
     status: 'success',
