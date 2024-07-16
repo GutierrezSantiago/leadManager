@@ -14,6 +14,8 @@ function Update(email, data, sheet, logSheet) {
     let logRow = buildLogRow(foundData, dataObject);
     insert(logRow, logSheet);
 
+    return dataObject;
+
   }
 
 function buildLogRow(oldData, newData) {

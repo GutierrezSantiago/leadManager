@@ -11,6 +11,31 @@ const doGet = (e) => {
   }
 }
 
+const doPost = (e) => {
+  var route = e.parameter.route;
+
+  switch (route) {
+    case 'leads':
+      return handleUpdateEstadoLead(e)
+    default:
+      return handleDefault(e)
+  }
+
+}
+
+const handleUpdateEstadoLead = (e) => {
+  email = e.parameter.email
+  requestBody = e.postData.contents
+
+  const updatedObject = updateEstadoLead(email, data)
+  
+  const response = {
+    status: 'success',
+    data: updatedObject
+  }
+  return createResponse(response)
+}
+
 const handleLeads = (e) => {
 
   if (e.parameter.email) {
@@ -28,7 +53,7 @@ const handleLeads = (e) => {
 }
 
 const handleHistorialesEstado = (e) => {
-  
+
   email = e.parameter.email
   historiales = getStateHistoryByEmail(email)
 
