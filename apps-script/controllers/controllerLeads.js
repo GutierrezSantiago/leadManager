@@ -1,14 +1,15 @@
 function updateEstadoLead(email, data)
 {
     try {
-    const leadsSheet = getSheet(env().SH_LEADS);
-    const stateHistorySheet = getSheet(env().SH_LEADS_STATE_HISTORY);
-    update(email, data, leadsSheet, stateHistorySheet);
+    const leadsSheet = getSheet(env_().SH_LEADS);
+    const stateHistorySheet = getSheet(env_().SH_LEADS_STATE_HISTORY);
+    Update(email, data, leadsSheet, stateHistorySheet);
     return {
         titulo: "Actualización exitosa.",
         descripcion: "El estado del lead ha sido actualizado."
         };
     } catch (error) {
+       Logger.log(error)
        return {
         titulo: "Error: " + error,
         descripcion: "Contacte con nosotros para solucionar el problema."
