@@ -1,0 +1,35 @@
+{
+  "name": "leadmanager",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "glogin": "clasp login",
+    "glogout": "clasp logout",
+    "gcreate": "clasp create --title 'Lead Manager' --rootDir ./apps-script",
+    "gclone": "clasp clone 1Js663NmAQFhvh-PirFkftIosv3-L4iB7X4XDyWb9B4YwXfrg6Axh7mvE --rootDir ./apps-script",
+    "gpull": "clasp pull",
+    "gpush": "clasp push",
+    "gstart": "clasp push --watch",
+    "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.83",
+    "antd": "^5.19.1",
+    "concurrently": "^8.2.2",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.4"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.1",
+    "sweetalert2": "^11.6.13"
+  }
+}
